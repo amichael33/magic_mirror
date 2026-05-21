@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Magic Mirror</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="mirror" class="mirror">
+      <section class="region region-top-left" aria-label="Date and time">
+        <div id="clock" class="clock">
+          <span id="time" class="time">--:--</span>
+          <span id="date" class="date">Loading…</span>
+        </div>
+      </section>
+
+      <section class="region region-top-right" aria-label="Weather">
+        <div id="weather" class="weather weather--loading">
+          <span id="weather-icon" class="weather__icon" aria-hidden="true"></span>
+          <div class="weather__text">
+            <span id="weather-temp" class="weather__temp">--°</span>
+            <span id="weather-desc" class="weather__desc">Weather</span>
+            <span id="weather-feels" class="weather__feels"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="region region-top-center" aria-label="Greeting">
+        <p id="greeting" class="greeting"></p>
+      </section>
+
+      <section class="region region-bottom-right" aria-label="Fish of the day">
+        <div id="fish" class="fish">
+          <span class="fish__label">Fish of the day</span>
+          <span id="fish-name" class="fish__name"></span>
+          <span id="fish-fact" class="fish__fact"></span>
+        </div>
+      </section>
+
+      <section class="region region-bottom-center" aria-label="Credit">
+        <p id="credit" class="credit"></p>
+      </section>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="fish-data.js"></script>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

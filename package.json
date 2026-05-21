@@ -1,0 +1,13 @@
+{
+  "name": "magic_mirror",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vilros V4 vertical magic mirror display",
+  "scripts": {
+    "start": "node server.js",
+    "kiosk": "bash scripts/start-kiosk.sh"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

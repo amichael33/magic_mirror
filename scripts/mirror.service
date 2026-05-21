@@ -1,0 +1,23 @@
+# systemd unit — install on the Pi:
+#   sudo cp scripts/mirror.service /etc/systemd/system/magic-mirror.service
+#   sudo nano /etc/systemd/system/magic-mirror.service   # fix User= and WorkingDirectory=
+#   sudo systemctl enable --now magic-mirror.service
+#
+# Then autostart Chromium kiosk via ~/.config/autostart/ (see README).
+
+[Unit]
+Description=Magic Mirror web server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/magic_mirror
+Environment=PORT=8080
+ExecStart=/usr/bin/npm start
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

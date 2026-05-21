@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Magic Mirror Kiosk
+Comment=Fullscreen browser for vertical Vilros mirror
+# Wait for the Node server on boot
+Exec=sh -c "sleep 8 && /home/pi/magic_mirror/scripts/start-kiosk.sh"
+X-GNOME-Autostart-enabled=true
