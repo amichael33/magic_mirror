@@ -28,7 +28,7 @@ Reboot: `sudo reboot`
 From your Windows PC (adjust host/user/path):
 
 ```powershell
-scp -r c:\Users\adolp\code\magic_mirror pi@YOUR_PI_HOST:~/magic_mirror
+scp -r c:\Users\YOUR_USER\code\magic_mirror pi@YOUR_PI_HOST:~/magic_mirror
 ```
 
 On the Pi:
